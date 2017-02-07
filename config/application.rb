@@ -21,9 +21,5 @@ module GaWireApi
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
-    # config.middleware.use OmniAuth::Builder do
-    #   # provider :github, ENV['GITHUB_KEY'], ENV['GITHUB_SECRET']#, scope: "user:email,user:follow"
-    #   provider :github, '383adfc3974a7f515f61', 'a8a77a97033efc786dfe3fe779cc773e9b321d5c'
-    # end
   end
 end
