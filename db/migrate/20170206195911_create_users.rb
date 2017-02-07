@@ -9,4 +9,4 @@ class CreateUsers < ActiveRecord::Migration
       t.string :image_url
     end
   end
-end
+end 

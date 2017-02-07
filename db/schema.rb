@@ -25,10 +25,12 @@ ActiveRecord::Schema.define(version: 20170206200628) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "username"
-    t.string   "avatar"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "nickname"
+    t.string "email"
+    t.string "provider"
+    t.string "token"
+    t.string "uid"
+    t.string "image_url"
   end
 
   add_foreign_key "posts", "users"
