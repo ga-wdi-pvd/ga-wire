@@ -1,5 +1,10 @@
 class SessionsController < ApplicationController
+  # skip_before_action :verify_authenticity_token, only: [:create]
+
   def create
+    puts "*" * 20
+    puts data
+    puts "*" * 20
     user = User.find_or_create_from_auth(data)
     if user
       session[:user_id] = user.id

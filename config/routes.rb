@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :posts, except: [:new, :edit]
 
-  get "auth/github/", as: "/login", to: "site#index"
-  get "auth/github/callback", to: "sessions#create"
+  get "auth/github/", to: "welcome#index"
+  match "auth/github/callback" => "sessions#create", :via => [:get, :post]
 
   get "dashboard", to: "users#show"
 
