@@ -1,17 +1,12 @@
 class PostsController < ApplicationController
   before_action :post_params, only: [:create, :update]
 
-  def index
-    posts = Post.all
-    render json: {status: 200, posts: posts}
-  end
-
   def create
     post = Post.create(post_params)
     if post.save
-      render json: {status: 200, post: post}
+      render component: 'Post', props: {post: post}
     else
-      render json: {status: 400, response: "invalid data", post: params}
+      render component: 'CreatePost'
     end
   end
 

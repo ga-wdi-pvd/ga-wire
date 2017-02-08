@@ -1,6 +1,7 @@
 class WelcomeController < ApplicationController
   def index
-    render component: 'App', props: { user: {} }
+    posts = Post.all
+    render component: 'App', props: { user: {}, posts: posts}
   end
 
 end
