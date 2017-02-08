@@ -1,5 +1,14 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  # config/environments/development.rb
+
+  # config.react.variant = :development
+  # config.react.addons = true # defaults to false
+  # config.react.jsx_transform_options = {
+  #   blacklist: ['spec.functionName', 'validation.react', 'strict'], # default options
+    # optional: ["es6"],  # pass extra babel options
+  #   whitelist: ["useStrict"] # even more options
+  # }
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
