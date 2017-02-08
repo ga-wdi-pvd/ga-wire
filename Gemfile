@@ -28,6 +28,9 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
+# React for server side rendering
+gem 'react-rails'
+
 # Gems for github auth
 gem 'figaro'
 gem 'omniauth-github'

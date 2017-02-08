@@ -10,8 +10,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to dashboard_path
     else
-      # redirect_to root_path
-      render json: {status: 400, message: "Invalid Data"}
+      redirect_to root_path
     end
   end
 
