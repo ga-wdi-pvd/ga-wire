@@ -1,7 +1,5 @@
 # GAWire API
 
-UI REPO LINK - https://github.com/ga-wdi-pvd/ga-wire
-
 Directions:
 
 ```bash
