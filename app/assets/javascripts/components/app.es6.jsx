@@ -3,7 +3,7 @@ class App extends React.Component {
     let {user} = this.props;
     return (
       <div>
-        <a href="/auth/github">Login/Signup</a>
+        <Header />
         <h1>{user.nickname}</h1>
         <img src={user.image_url}/>
       </div>
