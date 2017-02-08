@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     session.clear
-    render json: {status: 204, message: "No Content"}
+    redirect_to root_path
   end
 
   private
