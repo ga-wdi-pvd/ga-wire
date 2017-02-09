@@ -2,6 +2,9 @@ class PostsController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:create, :update]
   before_action :post_params, only: [:create, :update]
 
+  def new
+  end
+
   def create
     post = Post.create(post_params)
     if post.save
@@ -14,6 +17,9 @@ class PostsController < ApplicationController
   def show
     post = Post.find(params[:id])
     render component: 'App', props: { user: current_user, posts: [], post: post}
+  end
+
+  def edit
   end
 
   def update
