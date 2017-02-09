@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: [:create, :update]
   before_action :post_params, only: [:create, :update]
 
   def create
@@ -32,7 +33,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.required(:post).permit(:title, :body)
+    params.required(:post).permit(:user_id, :title, :body)
   end
 
 end
