@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def show
     # user = Builder.data(current_user)
-    render component: 'App', props: { user: current_user }
+    render component: 'App', props: { user: current_user, posts: posts, post: {}}
   end
 
 end
