@@ -6,6 +6,7 @@ class App extends React.Component {
         <Header />
         <h1>{user.nickname}</h1>
         <img src={user.image_url}/>
+        <PostForm />
         <PostList posts={posts}/>
         <Footer />
       </div>
