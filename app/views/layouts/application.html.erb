@@ -5,6 +5,8 @@
   </head>
 
   <body>
+    <%= react_component('Header', {user: current_user}, {prerender: true}) %>
     <%= yield %>
+    <%= react_component('Footer', {}, {prerender: true}) %>
   </body>
 </html>
