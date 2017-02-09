@@ -3,10 +3,12 @@ class PostsController < ApplicationController
   before_action :post_params, only: [:create, :update]
 
   def new
+    # the PostForm needs to be set up for both edit and new
+    render component: 'PostForm', props: {user: current_user, method: 'POST', path: '/posts'
   end
 
   def create
-    post = Post.create(post_params)
+    @post = Post.create(post_params)
     if post.save
       render component: 'App', props: { user: current_user, posts: [], post: post}
     else
@@ -15,15 +17,17 @@ class PostsController < ApplicationController
   end
 
   def show
-    post = Post.find(params[:id])
+    @post = Post.find(params[:id])
     render component: 'App', props: { user: current_user, posts: [], post: post}
   end
 
   def edit
+    # the PostForm needs to be set up for both edit and new
+    # render component: 'PostForm', props: {user: current_user, method: 'POST', path: '/posts'}
   end
 
   def update
-    post = Post.find(params[:id])
+    @post = Post.find(params[:id])
     if post.update(post_params)
       render component: 'App', props: { user: current_user, posts: [], post: post}
     else
@@ -32,7 +36,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    post = Post.destroy(params[:id])
+    @post = Post.destroy(params[:id])
     redirect_to root_path
   end
 
