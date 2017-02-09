@@ -4,7 +4,12 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :authorize!
 
   def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    if session[:user_id]
+      @current_user ||= User.find(session[:user_id])
+    else
+      @current_user ||= {}
+    end
+    @current_user
   end
 
   def authorize!
