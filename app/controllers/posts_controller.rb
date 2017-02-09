@@ -4,28 +4,29 @@ class PostsController < ApplicationController
   def create
     post = Post.create(post_params)
     if post.save
-      render component: 'Post', props: {post: post}
+      render component: 'App', props: { user: current_user, posts: {}, post: post}
     else
-      render component: 'CreatePost'
+      render component: 'App', props: { user: current_user, posts: {}, post: post}
     end
   end
 
   def show
-    render json: {response: 200, post: Post.find(params[:id])}
+    post = Post.find(params[:id])
+    render component: 'App', props: { user: current_user, posts: {}, post: post}
   end
 
   def update
     post = Post.find(params[:id])
     if post.update(post_params)
-      render json: {status: 200, post: post}
+      render component: 'App', props: { user: current_user, posts: {}, post: post}
     else
-      render json: {status: 400, response: "invalid data", post: params}
+      render component: 'App', props: { user: curren_user, posts: {}, post: post}
     end
   end
 
   def destroy
     post = Post.destroy(params[:id])
-    render json: {status: 204}
+    redirect_to root_path
   end
 
   private
