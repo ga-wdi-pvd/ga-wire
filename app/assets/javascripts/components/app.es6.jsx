@@ -4,7 +4,6 @@ class App extends React.Component {
     return (
       <div>
         <PostForm />
-        <PostList posts={posts}/>
         <Post post={post}/>
       </div>
     );
