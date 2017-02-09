@@ -5,23 +5,23 @@ class PostsController < ApplicationController
   def create
     post = Post.create(post_params)
     if post.save
-      render component: 'App', props: { user: current_user, posts: {}, post: post}
+      render component: 'App', props: { user: current_user, posts: [], post: post}
     else
-      render component: 'App', props: { user: current_user, posts: {}, post: post}
+      render component: 'App', props: { user: current_user, posts: [], post: post}
     end
   end
 
   def show
     post = Post.find(params[:id])
-    render component: 'App', props: { user: current_user, posts: {}, post: post}
+    render component: 'App', props: { user: current_user, posts: [], post: post}
   end
 
   def update
     post = Post.find(params[:id])
     if post.update(post_params)
-      render component: 'App', props: { user: current_user, posts: {}, post: post}
+      render component: 'App', props: { user: current_user, posts: [], post: post}
     else
-      render component: 'App', props: { user: curren_user, posts: {}, post: post}
+      render component: 'App', props: { user: curren_user, posts: [], post: post}
     end
   end
 
