@@ -9,8 +9,8 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
-    if post.save
-      render component: 'Post', props: {post: post}
+    if @post.save
+      render component: 'Post', props: {post: @post}
     else
       redirect_to new_post_path
     end
@@ -18,7 +18,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    render component: 'Post', props: {post: post}
+    render component: 'Post', props: {post: @post}
   end
 
   def edit
@@ -28,8 +28,8 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    if post.update(post_params)
-      render component: 'Post', props: {post: post}
+    if @post.update(post_params)
+      render component: 'Post', props: {post: @post}
     else
       redirect_to edit_post_path
     end
