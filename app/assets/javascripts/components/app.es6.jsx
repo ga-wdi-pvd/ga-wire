@@ -8,6 +8,7 @@ class App extends React.Component {
         <img src={user.image_url}/>
         <PostForm />
         <PostList posts={posts}/>
+        <Post post={post}/>
         <Footer />
       </div>
     );
