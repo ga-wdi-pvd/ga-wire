@@ -2,7 +2,9 @@ class PostList extends React.Component {
   render () {
     return (
       <div>
-        <PostItem />
+        {this.props.posts.map((post, index) => {
+          return <PostItem post={post}/>
+        })}
       </div>
     );
   }
