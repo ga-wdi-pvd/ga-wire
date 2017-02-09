@@ -3,7 +3,7 @@ class PostList extends React.Component {
     return (
       <div>
         {this.props.posts.map((post, index) => {
-          return <PostItem post={post}/>
+          return (<PostItem post={post}/>);
         })}
       </div>
     );
