@@ -19,6 +19,24 @@
 }
 
 .header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: black;
   color: white;
+}
+
+.header > a {
+  color: white;
+  text-decoration: none;
+}
+
+.header-logo {
+  display: flex;
+  flex-direction: row;
+  font-size: 25px;
+}
+
+.header-logo > img {
+  height: 30px;
 }
