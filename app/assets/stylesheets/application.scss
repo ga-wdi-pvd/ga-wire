@@ -14,19 +14,27 @@
 @import "bootstrap";
 
 .avatar {
-  height: 30px;
+  display: inline;
+  height: 20px;
   border-radius: 100%;
 }
 
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: black;
   color: white;
+  padding-top: 4px;
 }
 
-.header > a {
+.nav-bar {
+  width: 100px;
+}
+
+.nav-link {
+  display: inline;
+  font-size: 10px;
   color: white;
   text-decoration: none;
 }
@@ -34,9 +42,9 @@
 .header-logo {
   display: flex;
   flex-direction: row;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .header-logo > img {
-  height: 30px;
+  height: 25px;
 }

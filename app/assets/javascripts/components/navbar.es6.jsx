@@ -7,16 +7,16 @@ class Navbar extends React.Component {
     let {img} = this.props;
     if (img) {
       return (
-        <div>
+        <div className="nav-bar">
+          <Avatar img={img}/>
           <Navlink
             link={links[1].link}
             linkName={links[1].name}/>
-          <Avatar className="" img={img}/>
         </div>
       );
     } else {
       return (
-        <div>
+        <div className="nav-bar">
           <Navlink
             link={links[0].link}
             linkName={links[0].name}/>
