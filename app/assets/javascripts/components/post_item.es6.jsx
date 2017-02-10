@@ -1,8 +1,11 @@
 class PostItem extends React.Component {
   render () {
+    let {post} = this.props;
     return (
-      <div>
-        <h4>{this.props.post.title}</h4>
+      <div className="post-item">
+        <a href={`/posts/${post.id}`}>
+          <h4>{post.title}</h4>
+        </a>
       </div>
     );
   }

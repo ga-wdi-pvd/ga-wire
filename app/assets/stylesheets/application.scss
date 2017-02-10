@@ -1,0 +1,87 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+@import "bootstrap";
+
+.avatar {
+  display: inline;
+  height: 20px;
+  border-radius: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: 0;
+  height: 26px;
+}
+
+.nav-bar {
+  width: 100px;
+}
+
+.nav-link {
+  display: inline;
+  font-size: 10px;
+  color: white;
+  text-decoration: none;
+  font-family: 'Sumana', serif;
+}
+
+.header-logo {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Teko', sans-serif;
+  margin-left: 25px;
+}
+
+.header-logo > h6 {
+  font-size: 27px;
+}
+
+.header-logo > img {
+  height: 25px;
+}
+
+.new-button {
+  float: right;
+}
+
+.list-header {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.post-item {
+  border-bottom: 1px solid black;
+}
+
+
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0px;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  background-color: #efefef;
+  text-align: center;
+  height: 20px;
+  font-size: 10px;
+  font-family: 'Sumana', serif;
+}
