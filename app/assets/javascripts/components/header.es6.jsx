@@ -3,7 +3,7 @@ class Header extends React.Component {
     let {user, img} = this.props;
     return (
       <div className="header container-fluid">
-          <HeaderLogo className="" img={img}/>
+          <HeaderLogo img={img}/>
           <Navbar img={user.image_url}/>
       </div>
     );
