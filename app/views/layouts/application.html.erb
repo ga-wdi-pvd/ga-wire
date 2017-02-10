@@ -2,10 +2,14 @@
 <html>
   <head>
     <title>GaWireApi</title>
+    <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sumana" rel="stylesheet">
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
-    <%= react_component('Header', {user: current_user}, {prerender: true}) %>
+    <%= react_component('Header', {user: current_user, img: asset_url('/assets/ga-logo.png')}, {prerender: true}) %>
     <%= yield %>
     <%= react_component('Footer', {}, {prerender: true}) %>
   </body>

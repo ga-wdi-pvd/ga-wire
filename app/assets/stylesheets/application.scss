@@ -10,6 +10,44 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+@import "bootstrap";
+
+.avatar {
+  display: inline;
+  height: 20px;
+  border-radius: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+  padding: 0;
+  height: 26px;
+}
+
+.nav-bar {
+  width: 100px;
+}
+
+.nav-link {
+  display: inline;
+  font-size: 10px;
+  color: white;
+  text-decoration: none;
+  font-family: 'Sumana', serif;
+}
+
+.header-logo {
+  display: flex;
+  flex-direction: row;
+  font-size: 25px;
+  font-family: 'Teko', sans-serif;
+}
+
+.header-logo > img {
+  height: 25px;
+}

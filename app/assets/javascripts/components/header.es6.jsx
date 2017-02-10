@@ -1,12 +1,10 @@
 class Header extends React.Component {
   render () {
-    let {user} = this.props;
+    let {user, img} = this.props;
     return (
-      <div>
-        <h1>GA Wire</h1>
-        <Navbar />
-        <h1>{user.nickname}</h1>
-        <img src={user.image_url}/>
+      <div className="header container-fluid">
+          <HeaderLogo className="" img={img}/>
+          <Navbar img={user.image_url}/>
       </div>
     );
   }
