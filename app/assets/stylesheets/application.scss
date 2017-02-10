@@ -56,6 +56,22 @@
   height: 25px;
 }
 
+.new-button {
+  float: right;
+}
+
+.list-header {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.post-item {
+  border-bottom: 1px solid black;
+}
+
+
 .footer {
   position: fixed;
   right: 0;
