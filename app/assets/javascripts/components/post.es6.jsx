@@ -1,4 +1,7 @@
 class Post extends React.Component {
+  // method to handle the delete through ajax is needed
+  // prevent from deleting the post if the current user
+  // does not match the user_id of the post
   render () {
     let {post} = this.props;
     return (
