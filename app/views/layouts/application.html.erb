@@ -5,7 +5,7 @@
   </head>
 
   <body>
-    <%= react_component('Header', {user: current_user}, {prerender: true}) %>
+    <%= react_component('Header', {user: current_user, img: asset_url('/assets/ga-logo.png')}, {prerender: true}) %>
     <%= yield %>
     <%= react_component('Footer', {}, {prerender: true}) %>
   </body>
