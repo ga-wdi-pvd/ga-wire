@@ -7,7 +7,7 @@ class Header extends React.Component {
         <img src={img} alt="logo"/>
         <h1>GA Wire</h1>
         <Navbar />
-        <img className="avatar" src={user.image_url}/>
+        <Avatar img={user.image_url}/>
       </div>
     );
   }
