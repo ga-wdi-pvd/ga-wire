@@ -4,7 +4,7 @@ class HeaderLogo extends React.Component {
     return (
       <div className="header-logo">
         <img  src={img} alt="logo"/>
-        <h6 className="header-logo">WIRE</h6>
+        <h6>WIRE</h6>
       </div>
     );
   }

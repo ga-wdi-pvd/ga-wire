@@ -1,7 +1,7 @@
 class Navbar extends React.Component {
   render () {
     let links = [
-      {link: '/auth/github', name: 'Signup/Login'},
+      {link: '/auth/github', name: 'Sign in'},
       {link: '/logout', name: 'Logout'}
     ];
     let {img} = this.props;

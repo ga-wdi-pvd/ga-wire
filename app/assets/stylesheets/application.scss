@@ -22,7 +22,7 @@
 .header {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: black;
   color: white;
   padding: 0;
@@ -44,8 +44,12 @@
 .header-logo {
   display: flex;
   flex-direction: row;
-  font-size: 25px;
   font-family: 'Teko', sans-serif;
+  margin-left: 25px;
+}
+
+.header-logo > h6 {
+  font-size: 27px;
 }
 
 .header-logo > img {
