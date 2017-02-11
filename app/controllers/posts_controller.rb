@@ -4,7 +4,11 @@ class PostsController < ApplicationController
 
   def new
     # the PostForm needs to be set up for both edit and new
-    render component: 'PostForm', props: {user: current_user, method: 'POST', path: '/posts'}
+      if session[:user_id]
+      render component: 'PostForm', props: {user: current_user, method: 'POST', path: '/posts'}
+    else
+      render component: 'UserSignInMessage'
+    end
   end
 
   def create
