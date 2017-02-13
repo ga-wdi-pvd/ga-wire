@@ -1,6 +1,7 @@
 class WelcomeController < ApplicationController
   def index
     @posts = Post.all.reverse
-    render component: 'PostList', props: {user: current_user, posts: @posts}
+    @user = User.find_by(params[:user_id])
+    render component: 'PostList', props: {posts: @posts, user: @user}
   end
 end

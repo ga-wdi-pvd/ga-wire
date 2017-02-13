@@ -3,11 +3,11 @@ class Post extends React.Component {
   // prevent from deleting the post if the current user
   // does not match the user_id of the post
   render () {
-    let {post} = this.props;
+    let {post, user} = this.props;
     return (
       <div>
         <a href="/">&#171; Home</a>
-        <h1>{post.title}</h1>
+        <h1>{post.title}</h1>by {user.nickname}
         <p>
           {post.body}
         </p>

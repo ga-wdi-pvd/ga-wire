@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.create(post_params)
     if @post.save
-      render component: 'Post', props: {post: @post}
+      render component: 'Post', props: {post: @post, user: current_user}
     else
       redirect_to new_post_path
     end
@@ -22,7 +22,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    render component: 'Post', props: {post: @post}
+    @user = User.find_by(params[:user_id])
+    render component: 'Post', props: {post: @post, user: @user}
   end
 
   def edit
