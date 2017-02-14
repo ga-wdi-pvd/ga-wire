@@ -30,6 +30,8 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
+gem 'acts_as_tree'
+
 # React for server side rendering
 gem 'react-rails'
 
