@@ -36,3 +36,10 @@ This will scaffold a blank component in ES6 found in the `app/assets/javascropts
 No need to `import` or `export` any component. This is taken care of by the gem `react-rails`.
 
 More information on the `react-rails` gem can be fonud [here](https://github.com/reactjs/react-rails).
+
+## Contributors
+
+- [Eric Stermer](https://github.com/estermer)
+- [Danny Kirschner](https://github.com/danmon01)
+- [Toni Langley](https://github.com/tvlangley)
+- [Josie Tavera](https://github.com/JosephinaTavera)
