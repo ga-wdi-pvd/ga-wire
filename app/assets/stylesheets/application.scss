@@ -118,6 +118,19 @@ tr td:nth-child(3){
     width:12%;
 }
 
+.post{
+  margin-top: 50px;
+  width: 55%;
+}
+.post-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.post-header small {
+  align-self: flex-end;
+}
+
 .footer {
     position: fixed;
     right: 0;

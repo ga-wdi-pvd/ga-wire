@@ -5,12 +5,18 @@ class Post extends React.Component {
   render () {
     let {post, user} = this.props;
     return (
-      <div>
-        <a href="/">&#171; Home</a>
-        <h1>{post.title}</h1>by {user.nickname}
-        <p>
+      <div className="container post">
+        <div className="post-header">
+          <h1>{post.title}</h1>
+          <small>
+            {user.nickname}
+            <img className="avatar-list" src={user.image_url}/>
+          </small>
+        </div>
+        <hr/>
+        <div className="post-body">
           {post.body}
-        </p>
+        </div>
       </div>
     );
   }
