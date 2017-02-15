@@ -118,6 +118,38 @@ tr td:nth-child(3){
     width:12%;
 }
 
+.post{
+  margin-top: 50px;
+  width: 55%;
+}
+.post-header {
+  font-family: 'Sumana', serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.post-header span {
+  width: 120px;
+  align-self: flex-end;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+.post-body {
+  margin: 7px;
+}
+.post-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+.post-footer span {
+  background-color: #C0C0C0;
+  color: white;
+  border-radius: 3px;
+  padding: 2px;
+}
+
+
 .footer {
     position: fixed;
     right: 0;
