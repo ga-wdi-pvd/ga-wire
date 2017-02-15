@@ -4,7 +4,6 @@ class PostList extends React.Component {
     return (
       <div className="container">
         <table className="table forum table-striped">
-          <a className="new-button" href="/posts/new">&#43; New Post</a>
           <ListHeader />
           <tbody>
             {this.props.posts.map((post, index) => {
