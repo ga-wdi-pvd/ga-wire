@@ -4,13 +4,17 @@ class PostsController < ApplicationController
 
   def new
     # the PostForm needs to be set up for both edit and new
-    render component: 'PostForm', props: {user: current_user, method: 'POST', path: '/posts'}
+      if session[:user_id]
+      render component: 'PostForm', props: {user: current_user, method: 'POST', path: '/posts'}
+    else
+      render component: 'UserSignInMessage'
+    end
   end
 
   def create
     @post = Post.create(post_params)
     if @post.save
-      render component: 'Post', props: {post: @post}
+      render component: 'Post', props: {post: @post, user: current_user}
     else
       redirect_to new_post_path
     end
@@ -18,7 +22,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    render component: 'Post', props: {post: @post}
+    @user = User.find_by(params[:user_id])
+    render component: 'Post', props: {post: @post, user: @user}
   end
 
   def edit
