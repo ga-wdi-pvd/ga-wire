@@ -135,6 +135,20 @@ tr td:nth-child(3){
   align-items: flex-end;
   justify-content: space-around;
 }
+.post-body {
+  margin: 7px;
+}
+.post-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+.post-footer span {
+  background-color: #C0C0C0;
+  color: white;
+  border-radius: 3px;
+  padding: 2px;
+}
+
 
 .footer {
     position: fixed;

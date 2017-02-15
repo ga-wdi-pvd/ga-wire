@@ -17,6 +17,10 @@ class Post extends React.Component {
         <div className="post-body">
           {post.body}
         </div>
+        <div className="post-footer">
+          <span><i className="fa fa-reply"></i>reply</span>
+        </div>
+        <hr/>
       </div>
     );
   }
