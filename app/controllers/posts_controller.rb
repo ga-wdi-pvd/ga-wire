@@ -21,9 +21,9 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
-    @user = User.find_by(params[:user_id])
-    render component: 'Post', props: {post: @post, user: @user}
+    @post = Post.includes(:comments,:user).find(params[:id])
+    @post = @post.attributes.merge!({comments: @post.comments, user: {image_url: @post.user.image_url, nickname: @post.user.nickname}})
+    render component: 'Post', props: {post: @post}
   end
 
   def edit
