@@ -6,7 +6,7 @@ class PostItem extends React.Component {
     return (
       <tr>
         <td>
-          <h4><a href={`/posts/${post.id}`}>{post.title}</a></h4>
+          <h5><a href={`/posts/${post.id}`}>{post.title}</a></h5>
         </td>
         <td class="cell-stat text-center hidden-xs hidden-sm"><a href="#">{user.nickname}</a></td>
         <td class="cell-stat text-center hidden-xs hidden-sm">{cdate}</td>

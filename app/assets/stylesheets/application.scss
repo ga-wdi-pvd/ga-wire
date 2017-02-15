@@ -18,6 +18,17 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+
 
 .avatar {
     display: inline-block;
@@ -61,6 +72,11 @@ body {
   line-height: 65px;
 }
 
+.nav-link:hover {
+  color: #A9A9A9;
+  text-decoration: none;
+}
+
 .header-logo {
     width: 200px;
     height: 50px;
@@ -81,17 +97,12 @@ body {
 }
 
 .list-header {
+    color: #A9A9A9;
     font-family: 'Sumana', serif;
 }
 
-.post-item {
-    border-bottom: 1px solid black;
-}
-
-.post-item h4,
-.post-item p {
-    display: inline-block;
-    padding: 2% 8%;
+td {
+  font-size: 12px;
 }
 
 .footer {
