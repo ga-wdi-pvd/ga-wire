@@ -3,10 +3,13 @@ class Header extends React.Component {
     let {user, img} = this.props;
     return (
       <div className="header container-fluid">
-        <a href="/">
-          <HeaderLogo img={img}/>
+        <div className="header container">
+          <a href="/">
+            <HeaderLogo img={img}/>
+          </a>
           <Navbar img={user.image_url}/>
-        </a>
+        </div>
+
       </div>
     );
   }

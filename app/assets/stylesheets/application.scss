@@ -12,11 +12,20 @@
  *
  */
 @import "bootstrap";
+@import "font-awesome";
+
 
 .avatar {
-    display: inline;
+    display: inline-block;
     height: 40px;
     border-radius: 10px;
+    vertical-align: middle;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
 
 .header {
@@ -31,7 +40,7 @@
 }
 
 .nav-bar {
-    width: 200px;
+    height: 65px;
 }
 
 .nav-link {
@@ -42,13 +51,17 @@
     font-family: 'Sumana', serif;
 }
 
+.nav-link > i {
+  font-size: 30px;
+  line-height: 65px;
+}
+
 .header-logo {
     width: 200px;
     height: 50px;
     display: flex;
     flex-direction: row;
     font-family: 'Teko', sans-serif;
-    margin-left: 50px;
 }
 
 .header-logo > h6 {

@@ -1,8 +1,8 @@
 class Navbar extends React.Component {
   render () {
     let links = [
-      {link: '/auth/github', name: 'Sign in'},
-      {link: '/logout', name: 'Logout'}
+      {link: '/auth/github', style: 'fa fa-sign-in'},
+      {link: '/logout', style: 'fa fa-sign-out'}
     ];
     let {img} = this.props;
     if (img) {
@@ -11,7 +11,7 @@ class Navbar extends React.Component {
           <Avatar img={img}/>
           <Navlink
             link={links[1].link}
-            linkName={links[1].name}/>
+            style={links[1].style}/>
         </div>
       );
     } else {
@@ -19,7 +19,7 @@ class Navbar extends React.Component {
         <div className="nav-bar">
           <Navlink
             link={links[0].link}
-            linkName={links[0].name}/>
+            style={links[0].style}/>
         </div>
       );
     }
