@@ -1,7 +1,7 @@
 class ListHeader extends React.Component {
   render () {
     return (
-      <thead>
+      <thead className="list-header">
         <tr>
           <th>
             <h3>Topic</h3>

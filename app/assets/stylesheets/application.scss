@@ -14,6 +14,10 @@
 @import "bootstrap";
 @import "font-awesome";
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 
 .avatar {
     display: inline-block;
@@ -77,10 +81,7 @@
 }
 
 .list-header {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    font-family: 'Sumana', serif;
 }
 
 .post-item {
