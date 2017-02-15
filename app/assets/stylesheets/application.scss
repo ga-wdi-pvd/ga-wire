@@ -18,8 +18,9 @@
 .avatar {
     display: inline-block;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 100%;
     vertical-align: middle;
+    margin-right: 10px;
 }
 
 .helper {
@@ -73,10 +74,6 @@
 
 .header-logo > img {
     height: 50px;
-}
-
-.new-button {
-    float: right;
 }
 
 .list-header {

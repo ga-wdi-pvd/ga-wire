@@ -9,6 +9,11 @@ class Navbar extends React.Component {
       return (
         <div className="nav-bar">
           <Avatar img={img}/>
+          <span className="helper">
+            <a href="/posts/new" className="nav-link">
+              <i className="fa fa-plus"></i>
+            </a>
+          </span>
           <Navlink
             link={links[1].link}
             style={links[1].style}/>
