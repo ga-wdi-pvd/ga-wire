@@ -1,6 +1,7 @@
 class PostList extends React.Component {
   render () {
-  let {posts, user} = this.props;
+  let {posts} = this.props;
+
     return (
       <div className="container">
         <table className="table forum table-striped">
@@ -8,7 +9,7 @@ class PostList extends React.Component {
           <ListHeader />
           <tbody>
             {this.props.posts.map((post, index) => {
-              return (<PostItem post={post} user={user}/>);
+              return (<PostItem post={post} user={post.user} />);
             })}
           </tbody>
         </table>
