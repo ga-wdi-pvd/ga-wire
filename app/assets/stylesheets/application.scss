@@ -15,45 +15,51 @@
 
 .avatar {
     display: inline;
-    height: 20px;
-    border-radius: 100%;
+    height: 40px;
+    border-radius: 10px;
 }
 
 .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     background-color: black;
     color: white;
     padding: 0;
-    height: 26px;
+    height: 65px;
 }
 
 .nav-bar {
-    width: 100px;
+    width: 200px;
 }
 
 .nav-link {
     display: inline;
-    font-size: 10px;
+    font-size: 15px;
     color: white;
     text-decoration: none;
     font-family: 'Sumana', serif;
 }
 
 .header-logo {
+    width: 200px;
+    height: 50px;
     display: flex;
     flex-direction: row;
     font-family: 'Teko', sans-serif;
-    margin-left: 25px;
+    margin-left: 50px;
 }
 
 .header-logo > h6 {
-    font-size: 27px;
+    display: inline;
+    color: white;
+    font-size: 35px;
+    line-height: 53px;
 }
 
 .header-logo > img {
-    height: 25px;
+    height: 50px;
 }
 
 .new-button {
