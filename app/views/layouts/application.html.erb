@@ -8,7 +8,6 @@
         <%= csrf_meta_tags %>
         <%= favicon_link_tag 'gawire-favicon.png' %>
     </head>
-
     <body>
         <%= react_component('Header', {user: current_user, img: asset_url('/assets/ga-logo.png')}, {prerender: true}) %>
         <%= yield %>

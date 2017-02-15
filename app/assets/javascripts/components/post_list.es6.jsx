@@ -3,12 +3,15 @@ class PostList extends React.Component {
   let {posts, user} = this.props;
     return (
       <div className="container">
-        <a className="new-button" href="/posts/new">&#43; New Post</a>
-        <ListHeader />
-        <hr />
-        {this.props.posts.map((post, index) => {
-          return (<PostItem post={post} user={user}/>);
-        })}
+        <table className="table forum table-striped">
+          <a className="new-button" href="/posts/new">&#43; New Post</a>
+          <ListHeader />
+          <tbody>
+            {this.props.posts.map((post, index) => {
+              return (<PostItem post={post} user={user}/>);
+            })}
+          </tbody>
+        </table>
       </div>
     );
   }

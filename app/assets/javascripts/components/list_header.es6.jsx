@@ -1,11 +1,15 @@
 class ListHeader extends React.Component {
   render () {
     return (
-      <div className="list-header">
-        <h5>Title</h5>
-        <h5>User</h5>
-        <h5>Date</h5>
-      </div>
+      <thead>
+        <tr>
+          <th>
+            <h3>Post Title</h3>
+          </th>
+          <th className="cell-stat hidden-xs hidden-sm">Users</th>
+          <th className="cell-stat hidden-xs hidden-sm">Date</th>
+        </tr>
+      </thead>
     );
   }
 }
