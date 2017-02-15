@@ -38,6 +38,11 @@ a:hover {
     margin-right: 10px;
 }
 
+.avatar-list {
+  height: 25px;
+  border-radius: 100%;
+}
+
 .helper {
     display: inline-block;
     height: 100%;
@@ -103,6 +108,14 @@ a:hover {
 
 td {
   font-size: 12px;
+}
+
+tr td:nth-child(2){
+    width:15%;
+}
+
+tr td:nth-child(3){
+    width:12%;
 }
 
 .footer {
