@@ -4,7 +4,7 @@ class ListHeader extends React.Component {
       <thead>
         <tr>
           <th>
-            <h3>Post Title</h3>
+            <h3>Topic</h3>
           </th>
           <th className="cell-stat hidden-xs hidden-sm">Users</th>
           <th className="cell-stat hidden-xs hidden-sm">Date</th>
