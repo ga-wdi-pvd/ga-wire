@@ -123,12 +123,17 @@ tr td:nth-child(3){
   width: 55%;
 }
 .post-header {
+  font-family: 'Sumana', serif;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.post-header small {
+.post-header span {
+  width: 120px;
   align-self: flex-end;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
 }
 
 .footer {

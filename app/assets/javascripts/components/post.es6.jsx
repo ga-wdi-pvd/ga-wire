@@ -8,10 +8,10 @@ class Post extends React.Component {
       <div className="container post">
         <div className="post-header">
           <h1>{post.title}</h1>
-          <small>
-            {user.nickname}
+          <span>
+            <small>by: {user.nickname}</small>
             <img className="avatar-list" src={user.image_url}/>
-          </small>
+          </span>
         </div>
         <hr/>
         <div className="post-body">
