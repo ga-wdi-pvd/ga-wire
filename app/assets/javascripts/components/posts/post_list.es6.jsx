@@ -4,13 +4,9 @@ class PostList extends React.Component {
 
     return (
       <div className="container">
-        <table className="table forum table-striped">
+        <table id="post-list" className="table forum table-striped">
           <ListHeader />
-          <tbody>
-            {this.props.posts.map((post, index) => {
-              return (<PostItem post={post} user={post.user} />);
-            })}
-          </tbody>
+          <PostsBody posts={posts}/>
         </table>
       </div>
     );

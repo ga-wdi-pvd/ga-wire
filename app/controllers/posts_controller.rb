@@ -2,6 +2,11 @@ class PostsController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:create, :update]
   before_action :post_params, only: [:create, :update]
 
+  def index
+    @posts = Post.includes(:user).reverse.map {|post| post.attributes.merge!({user: {image_url: post.user.image_url, nickname: post.user.nickname}})}
+    @posts = Kaminari.paginate_array(@posts).page(params[:page]).per(10)
+  end
+
   def new
     # the PostForm needs to be set up for both edit and new
       if session[:user_id]

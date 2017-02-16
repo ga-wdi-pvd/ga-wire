@@ -1,0 +1,5 @@
+<%= react_component('PostList', {posts: @posts}, {prerender: true}) %>
+
+<div class="page-nav">
+  <%= paginate @posts %>
+</div>
