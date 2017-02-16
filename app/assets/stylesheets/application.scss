@@ -18,6 +18,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+h1 {
+  font-family: 'Sumana', serif;
+}
+
 a {
   color: black;
 }
@@ -149,6 +153,20 @@ tr td:nth-child(3){
   padding: 2px;
 }
 
+.new-post {
+  margin-top: 50px;
+  width: 55%;
+}
+
+input[type="text"] {
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  height: 300px;
+}
+
 
 .footer {
     position: fixed;
@@ -162,4 +180,48 @@ tr td:nth-child(3){
     height: 20px;
     font-size: 10px;
     font-family: 'Sumana', serif;
+}
+
+.pagination a, .pagination span.current, .pagination span.gap {
+    float: left;
+    padding: 0 14px;
+    line-height: 38px;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid #DDD;
+    border-left-width: 0;
+}
+
+.pagination {
+    border-left: 1px solid #ddd;
+    .first{
+        padding : 0;
+        float: none;
+        border: none;
+    }
+    .prev {
+        padding : 0;
+        float: none;
+        border: none;
+    }
+    .page{
+        padding : 0;
+        float: none;
+        border: none;
+    }
+    .next{
+        padding : 0;
+        float: none;
+        border: none;
+    }
+    .last{
+        padding : 0;
+        float: none;
+        border: none;
+    }
+}
+
+.page-nav {
+  display: flex;
+  justify-content: center;
 }
