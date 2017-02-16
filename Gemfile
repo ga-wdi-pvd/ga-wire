@@ -18,6 +18,7 @@ gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 # Use Bootstrap for styling
 gem 'bootstrap'
+gem 'react-bootstrap-rails'
 # Use for symbols and icons
 gem "font-awesome-rails"
 # Use Uglifier as compressor for JavaScript assets

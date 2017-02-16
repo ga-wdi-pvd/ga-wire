@@ -11,11 +11,13 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap
 //= require jquery_ujs
 //= require turbolinks
 //= require react
 //= require react_ujs
 //= require components
+//= require bootstrap
+//= require bootstrap/dropdown
+//= require react_bootstrap
 //= require_tree .
 //= require jquery.infinitescroll

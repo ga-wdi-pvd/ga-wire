@@ -11,7 +11,7 @@
  * It is generally better to create a new file per style scope.
  *
  */
-@import "bootstrap";
+// @import "bootstrap";
 @import "font-awesome";
 
 body {
@@ -26,13 +26,23 @@ a {
   color: black;
 }
 
+a:active {
+  color:inherit;
+}
+
 a:hover {
   text-decoration: none;
   color: black;
   cursor: pointer;
 }
 
+.fa-caret-down {
+  color: white;
+}
 
+.dropdown {
+  line-height: 65px;
+}
 
 .avatar {
     display: inline-block;
@@ -53,12 +63,17 @@ a:hover {
     vertical-align: middle;
 }
 
+.navigation {
+  background-color: black;
+}
+
 .header {
+    margin: 0 auto;
+    width: 75%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
     color: white;
     padding: 0;
     height: 65px;
@@ -97,7 +112,7 @@ a:hover {
     display: inline;
     color: white;
     font-size: 35px;
-    line-height: 53px;
+    line-height: 35px;
     font-family: 'Teko', sans-serif;
 }
 
