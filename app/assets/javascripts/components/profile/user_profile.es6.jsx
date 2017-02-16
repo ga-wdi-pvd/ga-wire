@@ -3,10 +3,10 @@ class UserProfile extends React.Component {
     let {user} = this.props;
     console.log(user);
     return (
-      <div className="user-profile">
+      <div className="container user-profile">
         <img src={user.user.image_url} />
         <h1>{user.user.nickname}</h1>
-        <UserCommits commitHistory={user.commit_history}/>
+        <UserCommits commits={user.commit_history}/>
         <RepoList repos={user.repositories} />
         <UserList users={user.users.followers} />
         <UserList users={user.users.following} />
