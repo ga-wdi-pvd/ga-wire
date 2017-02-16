@@ -5,7 +5,7 @@ class PostList extends React.Component {
     return (
       <div className="container">
         <table className="table forum table-striped">
-          <ListHeader />
+          <ListHeader headerName="Posts" />
           <tbody>
             {this.props.posts.map((post, index) => {
               return (<PostItem post={post} user={post.user} />);

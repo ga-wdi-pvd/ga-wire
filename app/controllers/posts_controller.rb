@@ -21,8 +21,10 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.includes(:comments,:user).find(params[:id])
-    @post = @post.attributes.merge!({comments: @post.comments, user: {image_url: @post.user.image_url, nickname: @post.user.nickname}})
+    # attempting to eager load some associations
+    # load the posts' user, and comments, and the user of all comments...possible in 1 query?
+    @post = Post.includes(:user, comments: :user).find(params[:id])
+    @post = @post.attributes.merge!({ user: {image_url: @post.user.image_url, nickname: @post.user.nickname}, comments: @post.comments.map {|comment| comment.attributes.merge!({user: comment.user, comments: comment.children })}})
     render component: 'Post', props: {post: @post}
   end
 

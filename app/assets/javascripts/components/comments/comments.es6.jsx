@@ -1,13 +1,13 @@
 class Comments extends React.Component {
   render () {
     return (
-      <div className="container">
+      <div className="comments-container">
         <table className="table forum table-striped">
-          <ListHeader />
+          <ListHeader headerName="Comments"/>
           <tbody>
           {this.props.comments.map((comment, index) => {
             return (
-              <Comment comment={comment} user={comment.user} />
+              <Comment key={index} comments={comment.children} comment={comment} user={comment.user} />
             );
 
           })}
