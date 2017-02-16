@@ -7,7 +7,7 @@ class Header extends React.Component {
           <a href="/">
             <HeaderLogo img={img}/>
           </a>
-          <Navbar img={user.image_url}/>
+          <Navbar img={user.image_url} user={user}/>
         </div>
 
       </div>

@@ -4,11 +4,11 @@ class Navbar extends React.Component {
       {link: '/auth/github', style: 'fa fa-sign-in'},
       {link: '/logout', style: 'fa fa-sign-out'}
     ];
-    let {img} = this.props;
-    if (img) {
+    let {img, user} = this.props;
+    if (user) {
       return (
         <div className="nav-bar">
-          <Avatar img={img}/>
+          <Avatar img={img} userId={user.id}/>
           <span className="helper">
             <a href="/posts/new" className="nav-link">
               <i className="fa fa-plus"></i>
