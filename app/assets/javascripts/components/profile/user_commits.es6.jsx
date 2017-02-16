@@ -3,6 +3,7 @@ class UserCommits extends React.Component {
     let {commits} = this.props;
     return (
       <div className="user-commits">
+        <h4>Commit History</h4>
         <ul>
           <li>Current streak: {commits.current_streak}</li>
           <li>Longest streak: {commits.longest_streak}</li>

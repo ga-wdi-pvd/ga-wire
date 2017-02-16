@@ -4,7 +4,7 @@ class UserProfile extends React.Component {
     console.log(user);
     return (
       <div className="container user-profile">
-        <div id="top">
+        <div className="top">
           <div>
             <img src={user.user.image_url} />
             <a href={`https://www.github.com/${user.user.nickname}`}>
@@ -13,9 +13,9 @@ class UserProfile extends React.Component {
           </div>
           <UserCommits commits={user.commit_history}/>
         </div>
+        <UserList users={user.users.followers} title="Followers"/>
+        <UserList users={user.users.following} title="Following"/>
         <RepoList repos={user.repositories} />
-        <UserList users={user.users.followers} />
-        <UserList users={user.users.following} />
       </div>
     );
   }

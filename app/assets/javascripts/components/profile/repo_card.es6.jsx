@@ -2,12 +2,18 @@ class RepoCard extends React.Component {
   render () {
     let {repo} = this.props;
     return (
-      <span className="repo-card">
-        <a target="_blank" href={repo.html_url}>
-          <h4>{repo.name}</h4>
+      <div className="repo-card card">
+        <a href={repo.html_url}>
+          <div className="card-block">
+              <h4 className="card-title">{repo.name}</h4>
+              <h6 className="card-subtitle mb-2 text-muted">last updated: {repo.updated_at}</h6>
+              <p className="card-text">{repo.description}</p>
+          </div>
         </a>
-      </span>
+      </div>
     );
   }
 }
 //use bootstrap cards
+// repo.description will get a description
+// repo.created_at repo.updated_at
