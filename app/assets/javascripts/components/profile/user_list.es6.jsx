@@ -4,7 +4,7 @@ class UserList extends React.Component {
     return (
       <div className="users-list">
         {this.props.users.map((user, index) => {
-          return (<UserCard />);
+          return (<UserCard user={user}/>);
         })}
       </div>
     );
