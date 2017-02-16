@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 
   def show
     user = Builder.data(current_user)
+    render component: 'UserProfile', props: {user: user} 
     # future dashboard for viewing a user profile component
   end
 
