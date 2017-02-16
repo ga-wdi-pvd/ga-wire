@@ -1,7 +1,7 @@
 class Navbar extends React.Component {
   render () {
     let {img, user} = this.props;
-    if (user) {
+    if (img) {
       return (
         <div className="nav-bar">
           <DropdownMenu img={img} userId={user.id}/>

@@ -4,8 +4,7 @@ class Navlink extends React.Component {
     return (
       <span className="helper">
         <a className="nav-link" href="/auth/github">
-          <h4>Login/Signup</h4>
-          <i className="fa fa-sign-in"></i>
+          <i className="fa fa-sign-in"> Login/Signup</i>
         </a>
       </span>
     );
