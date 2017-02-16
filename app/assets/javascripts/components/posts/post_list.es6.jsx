@@ -5,7 +5,7 @@ class PostList extends React.Component {
     return (
       <div className="container">
         <table id="post-list" className="table forum table-striped">
-          <ListHeader />
+          <ListHeader headerName="Posts"/>
           <PostsBody posts={posts}/>
         </table>
       </div>

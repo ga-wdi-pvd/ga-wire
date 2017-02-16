@@ -3,13 +3,13 @@ class Post extends React.Component {
   // prevent from deleting the post if the current user
   // does not match the user_id of the post
   render () {
-    let {post, user} = this.props;
+    let {post} = this.props;
     return (
       <div className="container post">
-        <PostHeader user={user} post={post}/>
+        <PostHeader user={post.user} post={post}/>
         <hr/>
         <PostBody post={post}/>
-        <PostFooter />
+        <PostFooter post={post} />
         <hr/>
       </div>
     );
