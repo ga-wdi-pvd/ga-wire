@@ -10,6 +10,7 @@ class DropdownMenu extends React.Component {
       <div className="dropdown">
         <a className="dropdown-toggle" data-toggle="dropdown">
           <Avatar onClick="dropdownToggleHandler()" img={img} />
+          <i className="fa fa-caret-down"></i>
         </a>
         <ul className="dropdown-menu" role="menu" aria-labelledby="dLabel">
           <li role="presentation">
