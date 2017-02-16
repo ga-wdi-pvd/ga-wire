@@ -37,6 +37,9 @@ gem 'jbuilder', '~> 2.5'
 # React for server side rendering
 gem 'react-rails'
 
+# Use for pagination scroller
+gem 'will_paginate'
+
 # Gems for github auth
 gem 'figaro'
 gem 'omniauth-github'
@@ -59,3 +62,4 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'kaminari'
