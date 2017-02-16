@@ -18,5 +18,6 @@
 //= require components
 //= require bootstrap
 //= require bootstrap/dropdown
+//= require react_bootstrap
 //= require_tree .
 //= require jquery.infinitescroll
