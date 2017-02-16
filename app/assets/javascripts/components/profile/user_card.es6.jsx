@@ -5,6 +5,7 @@ class UserCard extends React.Component {
       <span className="user-card">
         <a target="_blank" href={user.url}>
           <h4>{user.login}</h4>
+          <img src={user.avatar_url} />
         </a>
       </span>
     );
