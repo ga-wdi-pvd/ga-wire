@@ -11,6 +11,8 @@ class PostForm extends React.Component {
         <form action={path} method={method}>
           <input type="hidden" name="post[user_id]" value={user.id}/>
           <input type="text" name="post[title]" placeholder="Type your title here.."/><br/><br/>
+
+          <input type="text" name="post[url]" placeholder="Type your url here.."/><br/><br/>
           <textarea name="post[body]" /><br/>
           <input type="submit" value="&#43; Create Post" placeholder="Write your post here.."/>
           <a href="/">Cancel</a>
