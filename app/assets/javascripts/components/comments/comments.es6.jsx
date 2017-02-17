@@ -7,7 +7,7 @@ class Comments extends React.Component {
           <tbody>
           {this.props.comments.map((comment, index) => {
             return (
-              <Comment key={index} comments={comment.children} comment={comment} user={comment.user} />
+              <Comment key={index} comment={comment} user={comment.user} />
             );
 
           })}

@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
   def new
     # the PostForm needs to be set up for both edit and new
-      if session[:user_id]
+    if session[:user_id]
       render component: 'PostForm', props: {user: current_user, method: 'POST', path: '/posts'}
     else
       render component: 'UserSignInMessage'
@@ -17,9 +17,10 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(post_params)
+    @post = Post.new(post_params)
     if @post.save
-      render component: 'Post', props: {post: @post, user: current_user}
+      setup_post(@post.id)
+      render component: 'Post', props: {post: @post}
     else
       redirect_to new_post_path
     end
@@ -28,9 +29,8 @@ class PostsController < ApplicationController
   def show
     # attempting to eager load some associations
     # load the posts' user, and comments, and the user of all comments...possible in 1 query?
-    @post = Post.includes(:user, comments: :user).find(params[:id])
-    @post = @post.attributes.merge!({ user: {image_url: @post.user.image_url, nickname: @post.user.nickname}, comments: @post.comments.map {|comment| comment.attributes.merge!({user: comment.user, comments: comment.children })}})
-    render component: 'Post', props: {post: @post}
+    # taking out children now...
+    setup_post(params[:post_id] || params[:id])
   end
 
   def edit
@@ -54,8 +54,17 @@ class PostsController < ApplicationController
 
   private
 
+  def setup_post(post_id)
+   @post = Post.includes(:user, comments: :user).where(id: post_id)
+    vals = @post.pluck('users.nickname','users.image_url')[0]
+    nickname = vals[0]
+    image_url = vals[1]
+    @post = @post.first
+    @post = @post.attributes.merge!({ user: {image_url: image_url, nickname: nickname}, comments: @post.comments.map {|comment| comment.attributes.merge!({user: comment.user })}})
+  end
+
   def post_params
-    params.required(:post).permit(:user_id, :title, :body)
+    params.required(:post).permit(:user_id, :title, :body, :url)
   end
 
 end
